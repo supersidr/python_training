@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from selenium.webdriver.firefox.webdriver import WebDriver
+import selenium.webdriver.firefox.webdriver
 import unittest
 
 def is_alert_present(wd):
@@ -11,7 +11,7 @@ def is_alert_present(wd):
 
 class test_add_group(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver()
+        self.wd = selenium.webdriver.firefox.webdriver.WebDriver()
         self.wd.implicitly_wait(60)
     
     def test_add_group(self):
@@ -72,7 +72,7 @@ class test_add_group(unittest.TestCase):
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def open_home_page(self, wd):
-        wd.get("http://ab.mixfightnews.ru/")
+        wd.get("http://localhost/addressbook")
 
     def tearDown(self):
         self.wd.quit()
