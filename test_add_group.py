@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time, unittest
@@ -26,7 +27,7 @@ class test_add_group(unittest.TestCase):
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
-        wd.find_element_by_link_text("groups").click()
+        wd.find_element_by_link_text("Группы").click()
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
@@ -38,8 +39,8 @@ class test_add_group(unittest.TestCase):
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys("gwrgwgwrg")
         wd.find_element_by_name("submit").click()
-        wd.find_element_by_link_text("group page").click()
-        wd.find_element_by_link_text("Logout").click()
+        wd.find_element_by_link_text("Группы").click()
+        wd.find_element_by_link_text("Выйти").click()
         wd.find_element_by_name("pass").click()
         wd.find_element_by_name("pass").send_keys("\\undefined")
         wd.find_element_by_name("user").click()
