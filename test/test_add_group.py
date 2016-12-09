@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 #from selenium.webdriver.firefox.webdriver import WebDriver
 import pytest
-from group import Group
-from application import Application
+
+from fixtore.application import Application
+from model.group import Group
+
 
 @pytest.fixture
 def app(request):
